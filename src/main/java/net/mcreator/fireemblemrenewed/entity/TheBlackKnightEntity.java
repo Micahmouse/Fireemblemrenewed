@@ -5,7 +5,6 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.fmllegacy.network.NetworkHooks;
 import net.minecraftforge.fmllegacy.network.FMLPlayMessages;
 
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
@@ -14,8 +13,6 @@ import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.monster.RangedAttackMob;
 import net.minecraft.world.entity.monster.Monster;
-import net.minecraft.world.entity.ai.navigation.PathNavigation;
-import net.minecraft.world.entity.ai.navigation.FlyingPathNavigation;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.RangedAttackGoal;
@@ -23,7 +20,6 @@ import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
-import net.minecraft.world.entity.ai.control.FlyingMoveControl;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.SpawnGroupData;
@@ -43,11 +39,10 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.core.BlockPos;
 
-import net.mcreator.fireemblemrenewed.procedures.WeildingRagnellagainstblackknightProcedure;
 import net.mcreator.fireemblemrenewed.procedures.PlayUnstoppableDestinyProcedure;
-import net.mcreator.fireemblemrenewed.procedures.BlackKnightnotdamagedProcedure;
+import net.mcreator.fireemblemrenewed.procedures.BlackKnightdiesProcedure;
+import net.mcreator.fireemblemrenewed.procedures.BlackKnightDamagedProcedure;
 import net.mcreator.fireemblemrenewed.init.FireEmblemRenewedModItems;
 import net.mcreator.fireemblemrenewed.init.FireEmblemRenewedModEntities;
 
@@ -69,17 +64,11 @@ public class TheBlackKnightEntity extends Monster implements RangedAttackMob {
 		setCustomNameVisible(true);
 		setPersistenceRequired();
 		this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(FireEmblemRenewedModItems.ALONDITE));
-		this.moveControl = new FlyingMoveControl(this, 10, true);
 	}
 
 	@Override
 	public Packet<?> getAddEntityPacket() {
 		return NetworkHooks.getEntitySpawningPacket(this);
-	}
-
-	@Override
-	protected PathNavigation createNavigation(Level world) {
-		return new FlyingPathNavigation(this, world);
 	}
 
 	@Override
@@ -120,11 +109,6 @@ public class TheBlackKnightEntity extends Monster implements RangedAttackMob {
 	}
 
 	@Override
-	public boolean causeFallDamage(float l, float d, DamageSource source) {
-		return false;
-	}
-
-	@Override
 	public boolean hurt(DamageSource source, float amount) {
 		double x = this.getX();
 		double y = this.getY();
@@ -133,7 +117,7 @@ public class TheBlackKnightEntity extends Monster implements RangedAttackMob {
 		Level world = this.level;
 		Entity sourceentity = source.getEntity();
 
-		WeildingRagnellagainstblackknightProcedure.execute(world);
+		BlackKnightDamagedProcedure.execute(entity);
 		if (source.getDirectEntity() instanceof AbstractArrow)
 			return false;
 		if (source.getDirectEntity() instanceof Player)
@@ -162,6 +146,19 @@ public class TheBlackKnightEntity extends Monster implements RangedAttackMob {
 	}
 
 	@Override
+	public void die(DamageSource source) {
+		super.die(source);
+		double x = this.getX();
+		double y = this.getY();
+		double z = this.getZ();
+		Entity sourceentity = source.getEntity();
+		Entity entity = this;
+		Level world = this.level;
+
+		BlackKnightdiesProcedure.execute(world);
+	}
+
+	@Override
 	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason,
 			@Nullable SpawnGroupData livingdata, @Nullable CompoundTag tag) {
 		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
@@ -172,18 +169,6 @@ public class TheBlackKnightEntity extends Monster implements RangedAttackMob {
 
 		PlayUnstoppableDestinyProcedure.execute(entity);
 		return retval;
-	}
-
-	@Override
-	public void playerTouch(Player sourceentity) {
-		super.playerTouch(sourceentity);
-		Entity entity = this;
-		Level world = this.level;
-		double x = this.getX();
-		double y = this.getY();
-		double z = this.getZ();
-
-		BlackKnightnotdamagedProcedure.execute(world);
 	}
 
 	@Override
@@ -214,20 +199,6 @@ public class TheBlackKnightEntity extends Monster implements RangedAttackMob {
 		this.bossInfo.setProgress(this.getHealth() / this.getMaxHealth());
 	}
 
-	@Override
-	protected void checkFallDamage(double y, boolean onGroundIn, BlockState state, BlockPos pos) {
-	}
-
-	@Override
-	public void setNoGravity(boolean ignored) {
-		super.setNoGravity(true);
-	}
-
-	public void aiStep() {
-		super.aiStep();
-		this.setNoGravity(true);
-	}
-
 	public static void init() {
 	}
 
@@ -237,7 +208,6 @@ public class TheBlackKnightEntity extends Monster implements RangedAttackMob {
 		builder = builder.add(Attributes.MAX_HEALTH, 100);
 		builder = builder.add(Attributes.ARMOR, 0.5);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 8);
-		builder = builder.add(Attributes.FLYING_SPEED, 0.3);
 		return builder;
 	}
 }
