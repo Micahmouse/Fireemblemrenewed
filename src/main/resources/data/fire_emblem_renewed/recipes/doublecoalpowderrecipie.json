@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23"
+  ],
+  "key": {
+    "0": {
+      "item": "fire_emblem_renewed:coalpowder"
+    },
+    "1": {
+      "item": "fire_emblem_renewed:coalpowder"
+    },
+    "2": {
+      "item": "fire_emblem_renewed:coalpowder"
+    },
+    "3": {
+      "item": "fire_emblem_renewed:coalpowder"
+    }
+  },
+  "result": {
+    "item": "fire_emblem_renewed:doublecoalpowder",
+    "count": 1
+  }
+}

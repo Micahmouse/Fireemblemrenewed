@@ -1,0 +1,46 @@
+{
+  "_fv": 24,
+  "_type": "rangeditem",
+  "definition": {
+    "renderType": 0,
+    "texture": "meteor",
+    "customModelName": "Normal",
+    "name": "Meteor",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:Tomes"
+    },
+    "stackSize": 1,
+    "ammoItem": {
+      "value": ""
+    },
+    "shootConstantly": false,
+    "usageCount": 100,
+    "actionSound": {
+      "value": ""
+    },
+    "hasGlow": true,
+    "animation": "none",
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "bulletPower": 5.0,
+    "bulletDamage": 3.0,
+    "bulletKnockback": 0,
+    "bulletParticles": false,
+    "bulletIgnitesFire": true,
+    "bulletItemTexture": {
+      "value": "Items.NETHER_STAR"
+    },
+    "bulletModel": "Default",
+    "customBulletModelTexture": "",
+    "onBulletHitsBlock": {
+      "name": "MeteorMagic"
+    },
+    "onBulletHitsPlayer": {
+      "name": "MeteorMagic"
+    },
+    "onBulletHitsEntity": {
+      "name": "MeteorMagic"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "_fv": 24,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "alondite",
+    "customModelName": "Normal",
+    "name": "Alondite",
+    "specialInfo": [
+      "One of the two swords blessed by the goddess Ashera for Altina",
+      "one of the Three Heroes. Later wielded by the Black Knight",
+      "Rider of Daein",
+      "and General Zelgius of Begnion."
+    ],
+    "creativeTab": {
+      "value": "CUSTOM:LegendaryWeapons"
+    },
+    "toolType": "Sword",
+    "harvestLevel": 1,
+    "efficiency": 4.0,
+    "attackSpeed": 1.0,
+    "enchantability": 2,
+    "damageVsEntity": 8.0,
+    "usageCount": 1500,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "CUSTOM:Doublesteel"
+      }
+    ],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

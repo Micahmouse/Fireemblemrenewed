@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "fire_emblem_renewed:blocks/fireflower",
+    "particle": "fire_emblem_renewed:blocks/fireflower"
+  }
+}

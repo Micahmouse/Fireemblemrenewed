@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:book"
+    },
+    "1": {
+      "item": "minecraft:book"
+    },
+    "2": {
+      "item": "minecraft:book"
+    },
+    "3": {
+      "item": "minecraft:writable_book"
+    },
+    "4": {
+      "item": "minecraft:writable_book"
+    },
+    "5": {
+      "item": "minecraft:writable_book"
+    },
+    "6": {
+      "item": "minecraft:book"
+    },
+    "7": {
+      "item": "minecraft:book"
+    },
+    "8": {
+      "item": "minecraft:book"
+    }
+  },
+  "result": {
+    "item": "fire_emblem_renewed:blanktome",
+    "count": 1
+  }
+}

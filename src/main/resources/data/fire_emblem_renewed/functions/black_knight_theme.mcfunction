@@ -1,0 +1,1 @@
+/playsound fire_emblem_renewed:unstoppable.destiny ambient @a

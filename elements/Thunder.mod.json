@@ -1,0 +1,46 @@
+{
+  "_fv": 24,
+  "_type": "rangeditem",
+  "definition": {
+    "renderType": 0,
+    "texture": "thunder",
+    "customModelName": "Normal",
+    "name": "Thunder",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:Tomes"
+    },
+    "stackSize": 1,
+    "ammoItem": {
+      "value": ""
+    },
+    "shootConstantly": false,
+    "usageCount": 400,
+    "actionSound": {
+      "value": "entity.lightning.thunder"
+    },
+    "hasGlow": true,
+    "animation": "none",
+    "enableMeleeDamage": false,
+    "damageVsEntity": 6.0,
+    "bulletPower": 5.0,
+    "bulletDamage": 0.0,
+    "bulletKnockback": 0,
+    "bulletParticles": false,
+    "bulletIgnitesFire": false,
+    "bulletItemTexture": {
+      "value": "Items.NETHER_STAR"
+    },
+    "bulletModel": "Default",
+    "customBulletModelTexture": "",
+    "onBulletHitsBlock": {
+      "name": "ThunderMagic"
+    },
+    "onBulletHitsPlayer": {
+      "name": "ThunderMagic"
+    },
+    "onBulletHitsEntity": {
+      "name": "ThunderMagic"
+    }
+  }
+}

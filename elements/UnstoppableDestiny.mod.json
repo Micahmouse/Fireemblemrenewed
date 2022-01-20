@@ -1,0 +1,17 @@
+{
+  "_fv": 24,
+  "_type": "musicdisc",
+  "definition": {
+    "texture": "capture",
+    "name": "Unstoppable Destiny",
+    "description": "The Black Knight is coming for you. Say your final prayers to Ashera.",
+    "creativeTab": {
+      "value": "CUSTOM:AdditionalMusic"
+    },
+    "music": {
+      "value": "CUSTOM:unstoppable_destiny"
+    },
+    "specialInfo": [],
+    "hasGlow": false
+  }
+}

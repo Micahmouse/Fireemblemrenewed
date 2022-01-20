@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "fire_emblem_renewed:blocks/machine_top",
+    "up": "fire_emblem_renewed:blocks/lightningtop",
+    "north": "fire_emblem_renewed:blocks/machinefront",
+    "east": "fire_emblem_renewed:blocks/machine_side",
+    "south": "fire_emblem_renewed:blocks/machine_side",
+    "west": "fire_emblem_renewed:blocks/machine_side",
+    "particle": "fire_emblem_renewed:blocks/machine_top"
+  }
+}

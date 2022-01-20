@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "fire_emblem_renewed:block/lightningcollector"
+    },
+    "facing=east": {
+      "model": "fire_emblem_renewed:block/lightningcollector",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "fire_emblem_renewed:block/lightningcollector",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "fire_emblem_renewed:block/lightningcollector",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "unstoppable_destiny": {
+    "category": "neutral",
+    "subtitle": "subtitles.unstoppable_destiny",
+    "sounds": [
+      {
+        "name": "fire_emblem_renewed:against_the_black_knight",
+        "stream": false
+      }
+    ]
+  }
+}

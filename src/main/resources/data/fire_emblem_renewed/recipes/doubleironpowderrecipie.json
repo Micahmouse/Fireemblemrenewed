@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "fire_emblem_renewed:ironpowder"
+    },
+    {
+      "item": "fire_emblem_renewed:ironpowder"
+    },
+    {
+      "item": "fire_emblem_renewed:ironpowder"
+    },
+    {
+      "item": "fire_emblem_renewed:ironpowder"
+    }
+  ],
+  "result": {
+    "item": "fire_emblem_renewed:doubleironpowder",
+    "count": 1
+  }
+}

@@ -1,0 +1,704 @@
+{
+  "mod_elements": [
+    {
+      "name": "LegendaryWeapons",
+      "type": "tab",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "legendary_weapons"
+    },
+    {
+      "name": "Ragnell",
+      "type": "tool",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ragnell"
+    },
+    {
+      "name": "Steel",
+      "type": "item",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steel"
+    },
+    {
+      "name": "Hammer",
+      "type": "tool",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hammer"
+    },
+    {
+      "name": "Hammerrecipie",
+      "type": "recipe",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hammerrecipie"
+    },
+    {
+      "name": "Ironpowder",
+      "type": "item",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ironpowder"
+    },
+    {
+      "name": "Doubleironpowder",
+      "type": "item",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "doubleironpowder"
+    },
+    {
+      "name": "Doublesteel",
+      "type": "item",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "doublesteel"
+    },
+    {
+      "name": "BlackKnightArmour",
+      "type": "armor",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "black_knight_armour",
+      "metadata": {
+        "eh": true,
+        "el": true,
+        "eb": true,
+        "ec": true
+      }
+    },
+    {
+      "name": "Ironpowderrecipie",
+      "type": "recipe",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ironpowderrecipie"
+    },
+    {
+      "name": "Doubleironpowderrecipie",
+      "type": "recipe",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "doubleironpowderrecipie"
+    },
+    {
+      "name": "Coalpowder",
+      "type": "item",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coalpowder"
+    },
+    {
+      "name": "Steelpowder",
+      "type": "item",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steelpowder"
+    },
+    {
+      "name": "Steelrecipie",
+      "type": "recipe",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steelrecipie"
+    },
+    {
+      "name": "Doublecoalpowder",
+      "type": "item",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "doublecoalpowder"
+    },
+    {
+      "name": "Coalpowderrecipie",
+      "type": "recipe",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coalpowderrecipie"
+    },
+    {
+      "name": "Doublecoalpowderrecipie",
+      "type": "recipe",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "doublecoalpowderrecipie"
+    },
+    {
+      "name": "Doublesteelpowder",
+      "type": "item",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "doublesteelpowder"
+    },
+    {
+      "name": "Doublesteelpowderrecipie",
+      "type": "recipe",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "doublesteelpowderrecipie"
+    },
+    {
+      "name": "Steelpowderrecipie",
+      "type": "recipe",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steelpowderrecipie"
+    },
+    {
+      "name": "Doublesteelrecipie",
+      "type": "recipe",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "doublesteelrecipie"
+    },
+    {
+      "name": "AdditionalMusic",
+      "type": "tab",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "additional_music"
+    },
+    {
+      "name": "UnstoppableDestiny",
+      "type": "musicdisc",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "unstoppable_destiny"
+    },
+    {
+      "name": "BlackKnight",
+      "type": "loottable",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "black_knight"
+    },
+    {
+      "name": "BlackKnightTheme",
+      "type": "function",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "black_knight_theme"
+    },
+    {
+      "name": "TheBlackKnightLives",
+      "type": "achievement",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "the_black_knight_lives"
+    },
+    {
+      "name": "SteelSword",
+      "type": "tool",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steel_sword"
+    },
+    {
+      "name": "Hilt",
+      "type": "item",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hilt"
+    },
+    {
+      "name": "Steelswordblade",
+      "type": "item",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steelswordblade"
+    },
+    {
+      "name": "Steelswordcrossguard",
+      "type": "item",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steelswordcrossguard"
+    },
+    {
+      "name": "Steelswordrecipie",
+      "type": "recipe",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steelswordrecipie"
+    },
+    {
+      "name": "Steelswordbladerecipie",
+      "type": "recipe",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steelswordbladerecipie"
+    },
+    {
+      "name": "Steelswordhiltrecipie",
+      "type": "recipe",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steelswordhiltrecipie"
+    },
+    {
+      "name": "Steelswordcrossguardrecipie",
+      "type": "recipe",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steelswordcrossguardrecipie"
+    },
+    {
+      "name": "GrielsDeath",
+      "type": "painting",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "griels_death"
+    },
+    {
+      "name": "SteelAxe",
+      "type": "tool",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steel_axe"
+    },
+    {
+      "name": "Alondite",
+      "type": "tool",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "alondite"
+    },
+    {
+      "name": "IronSpear",
+      "type": "tool",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_spear"
+    },
+    {
+      "name": "Ironspearrecipie",
+      "type": "recipe",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ironspearrecipie"
+    },
+    {
+      "name": "Javelin",
+      "type": "rangeditem",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "javelin"
+    },
+    {
+      "name": "ThunderMagic",
+      "type": "procedure",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "thunder_magic",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Thunder",
+      "type": "rangeditem",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "thunder"
+    },
+    {
+      "name": "MeteorMagic",
+      "type": "procedure",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meteor_magic",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Meteor",
+      "type": "rangeditem",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meteor"
+    },
+    {
+      "name": "GoldCoin",
+      "type": "item",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gold_coin"
+    },
+    {
+      "name": "Tomes",
+      "type": "tab",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tomes"
+    },
+    {
+      "name": "Specialweaponitems",
+      "type": "tab",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "specialweaponitems"
+    },
+    {
+      "name": "Longswordblade",
+      "type": "item",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "longswordblade"
+    },
+    {
+      "name": "Longswordbladerecipie",
+      "type": "recipe",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "longswordbladerecipie"
+    },
+    {
+      "name": "RagnellBlade",
+      "type": "item",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ragnell_blade"
+    },
+    {
+      "name": "Ragnellbladerecipie",
+      "type": "recipe",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ragnellbladerecipie"
+    },
+    {
+      "name": "RagnellRecipie",
+      "type": "recipe",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ragnell_recipie"
+    },
+    {
+      "name": "FireFlower",
+      "type": "plant",
+      "sortid": 43,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_flower"
+    },
+    {
+      "name": "FireElement",
+      "type": "item",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_element"
+    },
+    {
+      "name": "Fireelementrecipie",
+      "type": "recipe",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fireelementrecipie"
+    },
+    {
+      "name": "Fire",
+      "type": "rangeditem",
+      "sortid": 46,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire"
+    },
+    {
+      "name": "Firemagic",
+      "type": "procedure",
+      "sortid": 47,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "firemagic",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Thunderelement",
+      "type": "item",
+      "sortid": 48,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "thunderelement"
+    },
+    {
+      "name": "Lightelement",
+      "type": "item",
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightelement"
+    },
+    {
+      "name": "Windelement",
+      "type": "item",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "windelement"
+    },
+    {
+      "name": "Blanktome",
+      "type": "item",
+      "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blanktome"
+    },
+    {
+      "name": "Blanktomerecipie",
+      "type": "recipe",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blanktomerecipie"
+    },
+    {
+      "name": "Firetomerecipie",
+      "type": "recipe",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "firetomerecipie"
+    },
+    {
+      "name": "Elfire",
+      "type": "rangeditem",
+      "sortid": 54,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "elfire"
+    },
+    {
+      "name": "Elfirerecipie",
+      "type": "recipe",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "elfirerecipie"
+    },
+    {
+      "name": "MeteorRecipie",
+      "type": "recipe",
+      "sortid": 56,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meteor_recipie"
+    },
+    {
+      "name": "Lightningcollector",
+      "type": "block",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightningcollector"
+    },
+    {
+      "name": "Lightningcollectorprocedure",
+      "type": "procedure",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightningcollectorprocedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [
+    {
+      "name": "unstoppable_destiny",
+      "files": [
+        "against_the_black_knight"
+      ],
+      "category": "neutral",
+      "subtitle": "The Black Knight is coming for you. Say your final prayers to Ashera."
+    }
+  ],
+  "language_map": {
+    "en_us": {
+      "item.fire_emblem_renewed.steelpowder": "Steelpowder",
+      "item.fire_emblem_renewed.fire_element": "Fire Element",
+      "item.fire_emblem_renewed.doublecoalpowder": "Doublecoalpowder",
+      "item.fire_emblem_renewed.black_knight_armour_boots": "Black Knight Boots",
+      "itemGroup.tabadditional_music": "Additional Music",
+      "item.fire_emblem_renewed.unstoppable_destiny": "Unstoppable Destiny",
+      "item.fire_emblem_renewed.meteor": "Meteor",
+      "item.fire_emblem_renewed.blanktome": "Blanktome",
+      "item.fire_emblem_renewed.black_knight_armour_helmet": "Black Knight Helmet",
+      "item.fire_emblem_renewed.fire": "Fire",
+      "item.fire_emblem_renewed.steel_sword": "Steel Sword",
+      "item.fire_emblem_renewed.longswordblade": "Longswordblade",
+      "itemGroup.tabspecialweaponitems": "Special Weapons and Items",
+      "subtitles.unstoppable_destiny": "The Black Knight is coming for you. Say your final prayers to Ashera.",
+      "item.fire_emblem_renewed.javelin": "Javelin",
+      "item.fire_emblem_renewed.hammer": "Hammer",
+      "item.fire_emblem_renewed.gold_coin": "Gold Coin",
+      "item.fire_emblem_renewed.alondite": "Alondite",
+      "item.fire_emblem_renewed.steel_axe": "Steel Axe",
+      "itemGroup.tablegendary_weapons": "Legendary Weapons",
+      "item.fire_emblem_renewed.black_knight_armour_chestplate": "Black Knight Body",
+      "item.fire_emblem_renewed.ragnell_blade": "Ragnell Blade",
+      "item.fire_emblem_renewed.doublesteelpowder": "Doublesteelpowder",
+      "item.fire_emblem_renewed.black_knight_armour_leggings": "Black Knight Leggings",
+      "item.fire_emblem_renewed.ragnell": "Ragnell",
+      "item.fire_emblem_renewed.hilt": "Hilt",
+      "advancements.the_black_knight_lives.descr": "Find the Armour of the Black Knight",
+      "item.fire_emblem_renewed.iron_spear": "Iron Spear",
+      "item.fire_emblem_renewed.thunder": "Thunder",
+      "block.fire_emblem_renewed.fire_flower": "Fire Flower",
+      "item.fire_emblem_renewed.steelswordblade": "Steelswordblade",
+      "item.fire_emblem_renewed.coalpowder": "Coalpowder",
+      "item.fire_emblem_renewed.lightelement": "Lightelement",
+      "item.fire_emblem_renewed.doublesteel": "Doublesteel",
+      "item.fire_emblem_renewed.thunderelement": "Thunderelement",
+      "item.fire_emblem_renewed.elfire": "Elfire",
+      "item.fire_emblem_renewed.doubleironpowder": "Doubleironpowder",
+      "item.fire_emblem_renewed.steel": "Steel",
+      "item.fire_emblem_renewed.windelement": "Windelement",
+      "item.fire_emblem_renewed.steelswordcrossguard": "Steelswordcrossguard",
+      "item.fire_emblem_renewed.ironpowder": "Ironpowder",
+      "advancements.the_black_knight_lives.title": "The Black Knight Lives",
+      "itemGroup.tabtomes": "Tomes",
+      "item.fire_emblem_renewed.unstoppable_destiny.desc": "The Black Knight is coming for you. Say your final prayers to Ashera.",
+      "block.fire_emblem_renewed.lightningcollector": "Lightningcollector"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "fire_emblem_renewed",
+    "modName": "Fire Emblem Renewed",
+    "version": "1.0.0",
+    "author": "senzh, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.17.1",
+    "modElementsPackage": "net.mcreator.fireemblemrenewed",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202100353117
+}

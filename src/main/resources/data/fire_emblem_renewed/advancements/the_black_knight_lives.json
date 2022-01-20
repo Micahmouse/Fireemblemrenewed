@@ -1,0 +1,43 @@
+{
+  "display": {
+    "background": "minecraft:textures/block/stone.png",
+    "icon": {
+      "item": "fire_emblem_renewed:black_knight_armour_helmet"
+    },
+    "title": {
+      "translate": "advancements.the_black_knight_lives.title"
+    },
+    "description": {
+      "translate": "advancements.the_black_knight_lives.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "the_black_knight_lives": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "fire_emblem_renewed:black_knight_armour_helmet"
+            ],
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 0,
+    "function": "fire_emblem_renewed:black_knight_theme",
+    "loot": [
+      "fire_emblem_renewed:entities/black_knight"
+    ]
+  }
+}

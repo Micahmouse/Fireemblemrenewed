@@ -1,0 +1,9 @@
+{
+  "_fv": 24,
+  "_type": "function",
+  "definition": {
+    "code": "/playsound fire_emblem_renewed:unstoppable.destiny ambient @a",
+    "name": "black_knight_theme",
+    "namespace": "mod"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "_fv": 24,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "ragnell",
+    "customModelName": "Normal",
+    "name": "Ragnell",
+    "specialInfo": [
+      "One of the two swords blessed by the goddess Ashera for Altina",
+      "one of the Three Heroes. Later wielded by Ike",
+      "the Radiant Hero and his descendant",
+      "Priam."
+    ],
+    "creativeTab": {
+      "value": "CUSTOM:LegendaryWeapons"
+    },
+    "toolType": "Sword",
+    "harvestLevel": 1,
+    "efficiency": 4.0,
+    "attackSpeed": 1.0,
+    "enchantability": 2,
+    "damageVsEntity": 7.0,
+    "usageCount": 700,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0",
+    "1"
+  ],
+  "key": {
+    "0": {
+      "item": "fire_emblem_renewed:fire_element"
+    },
+    "1": {
+      "item": "fire_emblem_renewed:fire"
+    }
+  },
+  "result": {
+    "item": "fire_emblem_renewed:elfire",
+    "count": 1
+  }
+}
