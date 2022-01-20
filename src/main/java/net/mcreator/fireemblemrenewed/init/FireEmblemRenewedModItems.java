@@ -9,6 +9,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.RegistryEvent;
 
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.item.SpawnEggItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.BlockItem;
@@ -53,7 +54,6 @@ import java.util.ArrayList;
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class FireEmblemRenewedModItems {
 	private static final List<Item> REGISTRY = new ArrayList<>();
-	public static final Item RAGNELL = register(new RagnellItem());
 	public static final Item STEEL = register(new SteelItem());
 	public static final Item BLACK_KNIGHT_ARMOUR_HELMET = register(new BlackKnightArmourItem.Helmet());
 	public static final Item BLACK_KNIGHT_ARMOUR_CHESTPLATE = register(new BlackKnightArmourItem.Chestplate());
@@ -73,7 +73,6 @@ public class FireEmblemRenewedModItems {
 	public static final Item STEELSWORDBLADE = register(new SteelswordbladeItem());
 	public static final Item STEELSWORDCROSSGUARD = register(new SteelswordcrossguardItem());
 	public static final Item STEEL_AXE = register(new SteelAxeItem());
-	public static final Item ALONDITE = register(new AlonditeItem());
 	public static final Item IRON_SPEAR = register(new IronSpearItem());
 	public static final Item JAVELIN = register(new JavelinItem());
 	public static final Item THUNDER = register(new ThunderItem());
@@ -91,6 +90,11 @@ public class FireEmblemRenewedModItems {
 	public static final Item ELFIRE = register(new ElfireItem());
 	public static final Item LIGHTNINGCOLLECTOR = register(FireEmblemRenewedModBlocks.LIGHTNINGCOLLECTOR, FireEmblemRenewedModTabs.TAB_TOMES);
 	public static final Item LIGHT = register(new LightItem());
+	public static final Item RAGNELL = register(new RagnellItem());
+	public static final Item THE_BLACK_KNIGHT = register(
+			new SpawnEggItem(FireEmblemRenewedModEntities.THE_BLACK_KNIGHT, -6750208, -1, new Item.Properties().tab(CreativeModeTab.TAB_MISC))
+					.setRegistryName("the_black_knight_spawn_egg"));
+	public static final Item ALONDITE = register(new AlonditeItem());
 
 	private static Item register(Item item) {
 		REGISTRY.add(item);

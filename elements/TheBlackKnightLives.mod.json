@@ -3,7 +3,7 @@
   "_type": "achievement",
   "definition": {
     "achievementName": "The Black Knight Lives",
-    "achievementDescription": "Find the Armour of the Black Knight",
+    "achievementDescription": "Summon the Black Knight",
     "achievementIcon": {
       "value": "CUSTOM:BlackKnightArmour.helmet"
     },

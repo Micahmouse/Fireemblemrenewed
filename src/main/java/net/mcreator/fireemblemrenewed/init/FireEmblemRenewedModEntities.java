@@ -15,11 +15,14 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.fireemblemrenewed.entity.ThunderEntity;
+import net.mcreator.fireemblemrenewed.entity.TheBlackKnightEntity;
+import net.mcreator.fireemblemrenewed.entity.RagnellEntity;
 import net.mcreator.fireemblemrenewed.entity.MeteorEntity;
 import net.mcreator.fireemblemrenewed.entity.LightEntity;
 import net.mcreator.fireemblemrenewed.entity.JavelinEntity;
 import net.mcreator.fireemblemrenewed.entity.FireEntity;
 import net.mcreator.fireemblemrenewed.entity.ElfireEntity;
+import net.mcreator.fireemblemrenewed.entity.AlonditeEntity;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -45,6 +48,15 @@ public class FireEmblemRenewedModEntities {
 	public static final EntityType<LightEntity> LIGHT = register("entitybulletlight",
 			EntityType.Builder.<LightEntity>of(LightEntity::new, MobCategory.MISC).setCustomClientFactory(LightEntity::new)
 					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final EntityType<RagnellEntity> RAGNELL = register("entitybulletragnell",
+			EntityType.Builder.<RagnellEntity>of(RagnellEntity::new, MobCategory.MISC).setCustomClientFactory(RagnellEntity::new)
+					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final EntityType<TheBlackKnightEntity> THE_BLACK_KNIGHT = register("the_black_knight",
+			EntityType.Builder.<TheBlackKnightEntity>of(TheBlackKnightEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(104).setUpdateInterval(3).setCustomClientFactory(TheBlackKnightEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final EntityType<AlonditeEntity> ALONDITE = register("entitybulletalondite",
+			EntityType.Builder.<AlonditeEntity>of(AlonditeEntity::new, MobCategory.MISC).setCustomClientFactory(AlonditeEntity::new)
+					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> EntityType<T> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		EntityType<T> entityType = (EntityType<T>) entityTypeBuilder.build(registryname).setRegistryName(registryname);
@@ -60,10 +72,12 @@ public class FireEmblemRenewedModEntities {
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {
 		event.enqueueWork(() -> {
+			TheBlackKnightEntity.init();
 		});
 	}
 
 	@SubscribeEvent
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
+		event.put(THE_BLACK_KNIGHT, TheBlackKnightEntity.createAttributes().build());
 	}
 }

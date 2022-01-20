@@ -1,36 +1,46 @@
 {
   "_fv": 24,
-  "_type": "tool",
+  "_type": "rangeditem",
   "definition": {
     "renderType": 0,
     "texture": "alondite",
     "customModelName": "Normal",
     "name": "Alondite",
     "specialInfo": [
-      "One of the two swords blessed by the goddess Ashera for Altina",
-      "one of the Three Heroes. Later wielded by the Black Knight",
-      "Rider of Daein",
-      "and General Zelgius of Begnion."
+      "One of two legendary swords blessed by Ashera and used by Altina against Yune",
+      "Later wielded by the Black Knight and General Zelgius."
     ],
     "creativeTab": {
       "value": "CUSTOM:LegendaryWeapons"
     },
-    "toolType": "Sword",
-    "harvestLevel": 1,
-    "efficiency": 4.0,
-    "attackSpeed": 1.0,
-    "enchantability": 2,
-    "damageVsEntity": 8.0,
-    "usageCount": 1500,
-    "blocksAffected": [],
-    "hasGlow": false,
-    "repairItems": [
-      {
-        "value": "CUSTOM:Doublesteel"
-      }
-    ],
-    "immuneToFire": false,
-    "stayInGridWhenCrafting": false,
-    "damageOnCrafting": false
+    "stackSize": 1,
+    "ammoItem": {
+      "value": ""
+    },
+    "shootConstantly": false,
+    "usageCount": 100,
+    "actionSound": {
+      "value": "entity.arrow.shoot"
+    },
+    "hasGlow": true,
+    "animation": "none",
+    "enableMeleeDamage": true,
+    "damageVsEntity": 7.0,
+    "onEntitySwing": {
+      "name": "BlackKnightDamaged"
+    },
+    "bulletPower": 10.0,
+    "bulletDamage": 3.0,
+    "bulletKnockback": 0,
+    "bulletParticles": true,
+    "bulletIgnitesFire": false,
+    "bulletItemTexture": {
+      "value": "Items.DIAMOND"
+    },
+    "bulletModel": "Default",
+    "customBulletModelTexture": "",
+    "onBulletHitsEntity": {
+      "name": "BlackKnightDamaged"
+    }
   }
 }

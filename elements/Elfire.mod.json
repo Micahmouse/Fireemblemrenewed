@@ -26,7 +26,7 @@
     "bulletPower": 10.0,
     "bulletDamage": 4.0,
     "bulletKnockback": 0,
-    "bulletParticles": true,
+    "bulletParticles": false,
     "bulletIgnitesFire": true,
     "bulletItemTexture": {
       "value": "CUSTOM:FireElement"

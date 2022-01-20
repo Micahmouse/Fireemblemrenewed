@@ -8,6 +8,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.level.Level;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.ItemSupplier;
 import net.minecraft.world.entity.projectile.AbstractArrow;
@@ -19,27 +20,26 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
 
-import net.mcreator.fireemblemrenewed.procedures.FiremagicProcedure;
-import net.mcreator.fireemblemrenewed.init.FireEmblemRenewedModItems;
+import net.mcreator.fireemblemrenewed.procedures.BlackKnightDamagedProcedure;
 import net.mcreator.fireemblemrenewed.init.FireEmblemRenewedModEntities;
 
 import java.util.Random;
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
-public class ElfireEntity extends AbstractArrow implements ItemSupplier {
-	public ElfireEntity(FMLPlayMessages.SpawnEntity packet, Level world) {
-		super(FireEmblemRenewedModEntities.ELFIRE, world);
+public class RagnellEntity extends AbstractArrow implements ItemSupplier {
+	public RagnellEntity(FMLPlayMessages.SpawnEntity packet, Level world) {
+		super(FireEmblemRenewedModEntities.RAGNELL, world);
 	}
 
-	public ElfireEntity(EntityType<? extends ElfireEntity> type, Level world) {
+	public RagnellEntity(EntityType<? extends RagnellEntity> type, Level world) {
 		super(type, world);
 	}
 
-	public ElfireEntity(EntityType<? extends ElfireEntity> type, double x, double y, double z, Level world) {
+	public RagnellEntity(EntityType<? extends RagnellEntity> type, double x, double y, double z, Level world) {
 		super(type, x, y, z, world);
 	}
 
-	public ElfireEntity(EntityType<? extends ElfireEntity> type, LivingEntity entity, Level world) {
+	public RagnellEntity(EntityType<? extends RagnellEntity> type, LivingEntity entity, Level world) {
 		super(type, entity, world);
 	}
 
@@ -51,25 +51,12 @@ public class ElfireEntity extends AbstractArrow implements ItemSupplier {
 	@Override
 	@OnlyIn(Dist.CLIENT)
 	public ItemStack getItem() {
-		return new ItemStack(FireEmblemRenewedModItems.FIRE_ELEMENT);
+		return new ItemStack(Items.DIAMOND);
 	}
 
 	@Override
 	protected ItemStack getPickupItem() {
 		return null;
-	}
-
-	@Override
-	public void playerTouch(Player entity) {
-		super.playerTouch(entity);
-		Entity sourceentity = this.getOwner();
-		double x = this.getX();
-		double y = this.getY();
-		double z = this.getZ();
-		Level world = this.level;
-		Entity imediatesourceentity = this;
-
-		FiremagicProcedure.execute(entity);
 	}
 
 	@Override
@@ -83,7 +70,7 @@ public class ElfireEntity extends AbstractArrow implements ItemSupplier {
 		Level world = this.level;
 		Entity imediatesourceentity = this;
 
-		FiremagicProcedure.execute(entity);
+		BlackKnightDamagedProcedure.execute(entity);
 	}
 
 	@Override
@@ -96,43 +83,41 @@ public class ElfireEntity extends AbstractArrow implements ItemSupplier {
 		Entity entity = this.getOwner();
 		Entity imediatesourceentity = this;
 		if (this.inGround) {
-
-			FiremagicProcedure.execute(entity);
 			this.discard();
 		}
 	}
 
-	public static ElfireEntity shoot(Level world, LivingEntity entity, Random random, float power, double damage, int knockback) {
-		ElfireEntity entityarrow = new ElfireEntity(FireEmblemRenewedModEntities.ELFIRE, entity, world);
+	public static RagnellEntity shoot(Level world, LivingEntity entity, Random random, float power, double damage, int knockback) {
+		RagnellEntity entityarrow = new RagnellEntity(FireEmblemRenewedModEntities.RAGNELL, entity, world);
 		entityarrow.shoot(entity.getLookAngle().x, entity.getLookAngle().y, entity.getLookAngle().z, power * 2, 0);
 		entityarrow.setSilent(true);
-		entityarrow.setCritArrow(false);
+		entityarrow.setCritArrow(true);
 		entityarrow.setBaseDamage(damage);
 		entityarrow.setKnockback(knockback);
-		entityarrow.setSecondsOnFire(100);
 		world.addFreshEntity(entityarrow);
-		world.playSound((Player) null, entity.getX(), entity.getY(), entity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("")),
-				SoundSource.PLAYERS, 1, 1f / (random.nextFloat() * 0.5f + 1) + (power / 2));
+		world.playSound((Player) null, entity.getX(), entity.getY(), entity.getZ(),
+				ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.arrow.shoot")), SoundSource.PLAYERS, 1,
+				1f / (random.nextFloat() * 0.5f + 1) + (power / 2));
 		return entityarrow;
 	}
 
-	public static ElfireEntity shoot(LivingEntity entity, LivingEntity target) {
-		ElfireEntity entityarrow = new ElfireEntity(FireEmblemRenewedModEntities.ELFIRE, entity, entity.level);
+	public static RagnellEntity shoot(LivingEntity entity, LivingEntity target) {
+		RagnellEntity entityarrow = new RagnellEntity(FireEmblemRenewedModEntities.RAGNELL, entity, entity.level);
 		double d0 = target.getY() + (double) target.getEyeHeight() - 1.1;
 		double d1 = target.getX() - entity.getX();
 		double d3 = target.getZ() - entity.getZ();
 		entityarrow.shoot(d1, d0 - entityarrow.getY() + Math.sqrt(d1 * d1 + d3 * d3) * 0.2F, d3, 10f * 2, 12.0F);
 		entityarrow.setSilent(true);
-		entityarrow.setBaseDamage(4);
+		entityarrow.setBaseDamage(3);
 		entityarrow.setKnockback(0);
-		entityarrow.setCritArrow(false);
-		entityarrow.setSecondsOnFire(100);
+		entityarrow.setCritArrow(true);
 		entity.level.addFreshEntity(entityarrow);
 		double x = entity.getX();
 		double y = entity.getY();
 		double z = entity.getZ();
-		entity.level.playSound((Player) null, (double) x, (double) y, (double) z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("")),
-				SoundSource.PLAYERS, 1, 1f / (new Random().nextFloat() * 0.5f + 1));
+		entity.level.playSound((Player) null, (double) x, (double) y, (double) z,
+				ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.arrow.shoot")), SoundSource.PLAYERS, 1,
+				1f / (new Random().nextFloat() * 0.5f + 1));
 		return entityarrow;
 	}
 }

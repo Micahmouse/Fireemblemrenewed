@@ -1,32 +1,46 @@
 {
   "_fv": 24,
-  "_type": "tool",
+  "_type": "rangeditem",
   "definition": {
     "renderType": 0,
     "texture": "ragnell",
     "customModelName": "Normal",
     "name": "Ragnell",
     "specialInfo": [
-      "One of the two swords blessed by the goddess Ashera for Altina",
-      "one of the Three Heroes. Later wielded by Ike",
-      "the Radiant Hero and his descendant",
-      "Priam."
+      "One of two legendary swords blessed by Ashera and used by Altina against Yune",
+      "Later wielded by Ike and his descendant Priam."
     ],
     "creativeTab": {
       "value": "CUSTOM:LegendaryWeapons"
     },
-    "toolType": "Sword",
-    "harvestLevel": 1,
-    "efficiency": 4.0,
-    "attackSpeed": 1.0,
-    "enchantability": 2,
+    "stackSize": 1,
+    "ammoItem": {
+      "value": ""
+    },
+    "shootConstantly": false,
+    "usageCount": 100,
+    "actionSound": {
+      "value": "entity.arrow.shoot"
+    },
+    "hasGlow": true,
+    "animation": "none",
+    "enableMeleeDamage": true,
     "damageVsEntity": 7.0,
-    "usageCount": 700,
-    "blocksAffected": [],
-    "hasGlow": false,
-    "repairItems": [],
-    "immuneToFire": false,
-    "stayInGridWhenCrafting": false,
-    "damageOnCrafting": false
+    "onEntitySwing": {
+      "name": "BlackKnightDamaged"
+    },
+    "bulletPower": 10.0,
+    "bulletDamage": 3.0,
+    "bulletKnockback": 0,
+    "bulletParticles": true,
+    "bulletIgnitesFire": false,
+    "bulletItemTexture": {
+      "value": "Items.DIAMOND"
+    },
+    "bulletModel": "Default",
+    "customBulletModelTexture": "",
+    "onBulletHitsEntity": {
+      "name": "BlackKnightDamaged"
+    }
   }
 }

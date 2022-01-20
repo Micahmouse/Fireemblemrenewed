@@ -20,6 +20,8 @@ public class FireEmblemRenewedModSounds {
 	static {
 		REGISTRY.put(new ResourceLocation("fire_emblem_renewed", "unstoppable_destiny"),
 				new SoundEvent(new ResourceLocation("fire_emblem_renewed", "unstoppable_destiny")));
+		REGISTRY.put(new ResourceLocation("fire_emblem_renewed", "galdrrelease"),
+				new SoundEvent(new ResourceLocation("fire_emblem_renewed", "galdrrelease")));
 	}
 
 	@SubscribeEvent

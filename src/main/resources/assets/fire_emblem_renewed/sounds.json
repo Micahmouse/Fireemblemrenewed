@@ -8,5 +8,14 @@
         "stream": false
       }
     ]
+  },
+  "galdrrelease": {
+    "category": "neutral",
+    "sounds": [
+      {
+        "name": "fire_emblem_renewed:fire-emblem-radiant-dawn-ost-galdrar-of-release-_micaiah_-_hq_",
+        "stream": false
+      }
+    ]
   }
 }

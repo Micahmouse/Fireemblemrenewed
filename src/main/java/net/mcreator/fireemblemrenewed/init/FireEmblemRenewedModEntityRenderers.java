@@ -11,6 +11,8 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
+import net.mcreator.fireemblemrenewed.client.renderer.TheBlackKnightRenderer;
+
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class FireEmblemRenewedModEntityRenderers {
 	@SubscribeEvent
@@ -21,5 +23,8 @@ public class FireEmblemRenewedModEntityRenderers {
 		event.registerEntityRenderer(FireEmblemRenewedModEntities.FIRE, ThrownItemRenderer::new);
 		event.registerEntityRenderer(FireEmblemRenewedModEntities.ELFIRE, ThrownItemRenderer::new);
 		event.registerEntityRenderer(FireEmblemRenewedModEntities.LIGHT, ThrownItemRenderer::new);
+		event.registerEntityRenderer(FireEmblemRenewedModEntities.RAGNELL, ThrownItemRenderer::new);
+		event.registerEntityRenderer(FireEmblemRenewedModEntities.THE_BLACK_KNIGHT, TheBlackKnightRenderer::new);
+		event.registerEntityRenderer(FireEmblemRenewedModEntities.ALONDITE, ThrownItemRenderer::new);
 	}
 }
