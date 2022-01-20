@@ -28,6 +28,7 @@ import net.mcreator.fireemblemrenewed.item.RagnellBladeItem;
 import net.mcreator.fireemblemrenewed.item.MeteorItem;
 import net.mcreator.fireemblemrenewed.item.LongswordbladeItem;
 import net.mcreator.fireemblemrenewed.item.LightelementItem;
+import net.mcreator.fireemblemrenewed.item.LightItem;
 import net.mcreator.fireemblemrenewed.item.JavelinItem;
 import net.mcreator.fireemblemrenewed.item.IronpowderItem;
 import net.mcreator.fireemblemrenewed.item.IronSpearItem;
@@ -89,6 +90,7 @@ public class FireEmblemRenewedModItems {
 	public static final Item BLANKTOME = register(new BlanktomeItem());
 	public static final Item ELFIRE = register(new ElfireItem());
 	public static final Item LIGHTNINGCOLLECTOR = register(FireEmblemRenewedModBlocks.LIGHTNINGCOLLECTOR, FireEmblemRenewedModTabs.TAB_TOMES);
+	public static final Item LIGHT = register(new LightItem());
 
 	private static Item register(Item item) {
 		REGISTRY.add(item);

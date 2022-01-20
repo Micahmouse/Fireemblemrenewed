@@ -20,5 +20,6 @@ public class FireEmblemRenewedModEntityRenderers {
 		event.registerEntityRenderer(FireEmblemRenewedModEntities.METEOR, ThrownItemRenderer::new);
 		event.registerEntityRenderer(FireEmblemRenewedModEntities.FIRE, ThrownItemRenderer::new);
 		event.registerEntityRenderer(FireEmblemRenewedModEntities.ELFIRE, ThrownItemRenderer::new);
+		event.registerEntityRenderer(FireEmblemRenewedModEntities.LIGHT, ThrownItemRenderer::new);
 	}
 }

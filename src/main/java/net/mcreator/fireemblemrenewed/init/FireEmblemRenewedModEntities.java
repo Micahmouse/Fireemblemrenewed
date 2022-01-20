@@ -16,6 +16,7 @@ import net.minecraft.world.entity.Entity;
 
 import net.mcreator.fireemblemrenewed.entity.ThunderEntity;
 import net.mcreator.fireemblemrenewed.entity.MeteorEntity;
+import net.mcreator.fireemblemrenewed.entity.LightEntity;
 import net.mcreator.fireemblemrenewed.entity.JavelinEntity;
 import net.mcreator.fireemblemrenewed.entity.FireEntity;
 import net.mcreator.fireemblemrenewed.entity.ElfireEntity;
@@ -40,6 +41,9 @@ public class FireEmblemRenewedModEntities {
 					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final EntityType<ElfireEntity> ELFIRE = register("entitybulletelfire",
 			EntityType.Builder.<ElfireEntity>of(ElfireEntity::new, MobCategory.MISC).setCustomClientFactory(ElfireEntity::new)
+					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final EntityType<LightEntity> LIGHT = register("entitybulletlight",
+			EntityType.Builder.<LightEntity>of(LightEntity::new, MobCategory.MISC).setCustomClientFactory(LightEntity::new)
 					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> EntityType<T> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
